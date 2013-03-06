@@ -22,8 +22,12 @@ class Vector_3D:
             z_product = self.z*other
             return Vector_3D(x_product, y_product, z_product)
 
-    def __mod__(self, other):   # overload MOD operator to render magnitude of distance
-        return self.magnitude_of_dist(self-other)
+    def __mod__(self, vector_tuple):   # overload MOD operator to render magnitude of distance
+        #power = vector_tuple[1]
+		#vector = vector_tuple[0]
+		#return self.magnitude_of_dist(self-vector, power)
+		#return self.magnitude_of_dist(self-other)
+		return self.magnitude_of_dist(self-vector_tuple[0], vector_tuple[1])
 
     def __add__(self, other):
         return Vector_3D(self.x+other.x, self.y+other.y, self.z+other.z)
@@ -45,8 +49,8 @@ class Vector_3D:
         self.z = self.z**power
         return self
 
-    def magnitude_of_dist(self, r):
-        return math.sqrt(r.x**2 + r.y**2 + r.z**2)
+    def magnitude_of_dist(self, r, a):
+        return (r.x**2 + r.y**2 + r.z**2)**a
 
     def magnitude(self):
         return math.sqrt(self.x**2 + self.y**2 + self.z**2)
