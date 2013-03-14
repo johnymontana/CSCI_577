@@ -60,16 +60,16 @@ class Container(object):
         #self.vz = vz
 
     def dx(self):
-        print "x: "
-        print self.x
+        #print "x: "
+        #print self.x
         xtemp = np.tile(self.x, (self.x.size,1))
-        print "xtemp"
-        print xtemp
+        #print "xtemp"
+        #print xtemp
         dx = xtemp - xtemp.T
         dx[dx > self.Lx / 2.] -= self.Lx
         dx[dx < -self.Lx / 2.] += self.Lx
-        print "dx"
-        print dx
+        #print "dx"
+        #print dx
         return dx
 
     def dy(self):

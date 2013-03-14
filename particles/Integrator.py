@@ -11,14 +11,14 @@ class Integrator(object):
         self.f.c.az = f.az()
 
     def integrate(self):
-        print "vx"
-        print self.f.c.vx
+        #print "vx"
+        #print self.f.c.vx
 
-        print "vy"
-        print self.f.c.vy
+        #print "vy"
+        #print self.f.c.vy
 
-        print "vz"
-        print self.f.c.vz
+        #print "vz"
+        #print self.f.c.vz
 
         self.f.c.x = self.f.c.x + self.f.c.vx * self.dt + self.f.c.ax * 0.5 * self.dt ** 2
         self.f.c.y = self.f.c.y + self.f.c.vy * self.dt + self.f.c.ay * 0.5 * self.dt ** 2
